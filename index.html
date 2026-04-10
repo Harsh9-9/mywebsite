@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio website showcasing my web development projects, skills, and experience in HTML, CSS, and JavaScript.">
+  <title>My Portfolio | Web Developer</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header>
+    <div class="navi">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <article>
+
+      <!-- Introduction Section -->
+      <section>
+  <div class="introduction-home">
+
+    
+      <h1 id="hi">Hi, I am Sujeet Kumar</h1>
+      <p id="para">
+        <span id="type"></span>
+      </p>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const texts = [
+    "Welcome to my website! This website represents my first attempt at building a website.",
+    "I am a Developer",
+    "I am an Artist",
+    "I am a Learner",
+    "I am a Gamer"
+  ];
+
+  let count = 0;
+  let index = 0;
+
+  function type() {
+    const currentText = texts[count];
+    const letter = currentText.slice(0, ++index);
+
+    document.getElementById("type").textContent = letter;
+
+    if (letter.length === currentText.length) {
+      count = (count + 1) % texts.length;
+      index = 0;
+      setTimeout(type, 1000);
+    } else {
+      setTimeout(type, 100);
+    }
+  }
+
+  type();
+});
+</script>
+
+      <!-- Purpose Section -->
+      <section>
+        <div class="middle-part">
+          <h2 class="head">Purpose</h2>
+          <p>
+            The primary purpose of creating this website is to practice and refine my web development skills. Additionally, it serves as a platform to share my interests and hobbies with others. By working on this website, I am gaining valuable experience in designing user-friendly interfaces, structuring content effectively, and implementing dynamic functionality. This website is both a learning tool and a personal showcase.
+          </p>
+        </div>
+      </section>
+
+      <!-- Technologies Used Section -->
+      <section>
+        <div class="middle-part">
+          <h2 class="head">Technologies Used</h2>
+
+          <div class="image-container">
+            <img src="html.jpg" alt="HTML Logo" class="im">
+            <img src="css.jpg" alt="CSS Logo" class="im">
+          </div>
+
+          <p>
+            This website is developed using HTML for structuring content and CSS for styling and layout. Responsive design principles are applied to ensure compatibility across devices. Modern web standards and best practices have been followed to deliver a clean, efficient, and user-friendly experience.
+          </p>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!--footer-->
+  <div class="foot">
+  <footer>
+    <p class="msg"> © 2026 Sujeet Kumar Built with ❤️. </p> <br>
+    <p class="msg"> I Hope you like my website! Thanks for visiting.</p>
+    <div class="na">
+      <a href="index.html" class="pad">Home</a>
+      <a href="about.html" class="pad">About me</a>
+      <a href="projects.html" class="pad">Projects</a>
+      <a href="contact.html" class="pad">Contact me</a>
+    </div>
+  </footer>
+  </div>
+</body>
+</html>
